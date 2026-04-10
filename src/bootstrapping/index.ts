@@ -11,7 +11,7 @@ export * from './DataCatalogModule';
 export * from './useDataCache';
 
 export const useScrinium = createServiceModuleWithOptions<ScriniumBootstrappingOptions>(
-  '@aesop-fables/scrinium',
+  '@guidedchoice/scrinium',
   (services, options) => {
     services.include(new DataCacheRegistry(options));
     services.autoResolve<ISubjectResolver>(ScriniumServices.SubjectResolver, SubjectResolver, Scopes.Singleton);
