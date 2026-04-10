@@ -11,13 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     outputs:
       NEXT_VERSION: ${{ steps.get-version.outputs.NEXT_VERSION }}
       NEXT_VERSION_NO_PREFIX: ${{ steps.get-version.outputs.NEXT_VERSION_NO_PREFIX }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -48,10 +50,10 @@ jobs:
       NEXT_VERSION_NO_PREFIX: ${{ needs.get-version.outputs.NEXT_VERSION_NO_PREFIX }}
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org/
