@@ -55,8 +55,11 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           registry-url: https://registry.npmjs.org/
+
+      - name: Upgrade npm
+        run: npm install -g npm@latest
 
       - name: Set Version
         run: |
@@ -72,7 +75,9 @@ jobs:
         run: npm test
 
       - name: Publish
-        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ''
+        run: npm publish --provenance --access public
 
       - name: Cleanup
         if: always()
