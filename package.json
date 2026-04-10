@@ -2,6 +2,10 @@
   "name": "@guidedchoice/scrinium",
   "version": "0.0.0",
   "description": "A fully observable data projection/mutation layer for react, built on top of rxjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GuidedChoice/scrinium"
+  },
   "type": "commonjs",
   "exports": {
     "./package.json": "./package.json",
