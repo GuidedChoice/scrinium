@@ -174,7 +174,7 @@ export class Repository<Registry> implements IRepository<Registry> {
  * @param registry The registry used to configure the various entity options
  * @example
  * ```ts
- * import { RepositoryCompartmentOptions } from '@aesop-fables/scrinium';
+ * import { RepositoryCompartmentOptions } from '@guidedchoice/scrinium';
  *
  * // In this example, we'll be looking up videos by id
  * interface Video {

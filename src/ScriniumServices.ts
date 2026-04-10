@@ -1,8 +1,8 @@
 export const ScriniumServices = {
-  ApplicationState: '@aesop-fables/scrinium/applicationState',
-  DataCatalog: '@aesop-fables/scrinium/dataCatalog',
-  DataStore: '@aesop-fables/scrinium/dataStore',
-  CommandExecutor: '@aesop-fables/scrinium/commandExecutor',
-  QueryDispatcher: '@aesop-fables/scrinium/queryDispatcher',
-  SubjectResolver: '@aesop-fables/scrinium/subjectResolver',
+  ApplicationState: '@guidedchoice/scrinium/applicationState',
+  DataCatalog: '@guidedchoice/scrinium/dataCatalog',
+  DataStore: '@guidedchoice/scrinium/dataStore',
+  CommandExecutor: '@guidedchoice/scrinium/commandExecutor',
+  QueryDispatcher: '@guidedchoice/scrinium/queryDispatcher',
+  SubjectResolver: '@guidedchoice/scrinium/subjectResolver',
 };

@@ -11,7 +11,7 @@ export type PredicateIdentifier = string | IMetadataSubject<any>;
 
 export type ConstructorDecorator = (target: Constructor) => void;
 
-const metadataKey = Symbol('@aesop-fables/scrinium/predicates/metadata');
+const metadataKey = Symbol('@guidedchoice/scrinium/predicates/metadata');
 
 export const getPredicateMetadata = (constructor: Constructor) => {
   const metadata = Reflect.getMetadata(metadataKey, constructor) ?? [];

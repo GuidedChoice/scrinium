@@ -1,5 +1,5 @@
 {
-  "name": "@aesop-fables/scrinium",
+  "name": "@guidedchoice/scrinium",
   "version": "0.0.0",
   "description": "A fully observable data projection/mutation layer for react, built on top of rxjs",
   "type": "commonjs",

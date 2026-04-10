@@ -2,7 +2,7 @@
 declare type Constructor = Function;
 declare type MiddlewareAliasRegistry = { [key: string]: Constructor };
 
-const middlewareKey = Symbol('@aesop-fables/scrinium/commands/middleware/metadata');
+const middlewareKey = Symbol('@guidedchoice/scrinium/commands/middleware/metadata');
 const registry: MiddlewareAliasRegistry = {};
 
 const getCommandMiddlwareMetadata = (constructor: Constructor) => {

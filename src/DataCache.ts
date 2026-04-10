@@ -49,9 +49,7 @@ export class DataCache<T> implements IDataCache {
   }
 
   async reloadAll(): Promise<void> {
-    for (let i = 0; i < this.compartments.length; i++) {
-      await this.compartments[i].reload();
-    }
+    await Promise.all(this.compartments.map((c) => c.reload()));
   }
 
   async reload(key: keyof T): Promise<void> {
@@ -60,9 +58,7 @@ export class DataCache<T> implements IDataCache {
   }
 
   async resetAll(): Promise<void> {
-    for (let i = 0; i < this.compartments.length; i++) {
-      await this.compartments[i].reset();
-    }
+    await Promise.all(this.compartments.map((c) => c.reset()));
   }
 
   async reset(key: keyof T): Promise<void> {
